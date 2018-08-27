@@ -9,6 +9,7 @@ const user = {
   age: 18
 }
 
+console.log(1)
 ReactDom.render(<div>
   123
   <Hello {...user}></Hello>
