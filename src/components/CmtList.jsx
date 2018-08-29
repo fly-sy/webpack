@@ -1,5 +1,12 @@
 import React from 'react'
 import CmtItem from './CmtItem'
+
+// 没开启模块化
+// import '../assets/cmtlist.css'
+
+// 开启模块化
+import styles from '../assets/cmtlist.css'
+
 export default class CmtList extends React.Component {
   constructor() {
     super()
@@ -18,7 +25,11 @@ export default class CmtList extends React.Component {
     const { CommentList } = this.state
     return (
       <div>
-        <h1>评论组件</h1>
+        {/* 当前使用的className 属性值使用 字符串 */}
+        {/* style 属性值为 {obj} 表达式 */}
+        {/* 没开启模块化 */}
+        {/* <h1 className="title">评论组件</h1> */}
+        <h1 className={styles.title}>评论组件</h1>
         {CommentList.map(item => <CmtItem key={item.id} {...item}></CmtItem>)}
       </div>
     )

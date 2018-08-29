@@ -1,0 +1,9 @@
+.cmtbox {
+  border: 1px dashed green; 
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.title {
+  font-size: 14px; 
+}
