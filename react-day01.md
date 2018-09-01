@@ -1,12 +1,12 @@
 # react-day01
 
-##  库和框架的区别
+##  一、库和框架的区别
 
 + 库  插件式的、切入到相同的插件很容易 jquery、zepto 、引入的一些插件  
 
 + 框架  一整套的解决方法、 ui、路由、http请求，切入到别的框架会比较困难  
 
-##  前端三大框架简单对比   
+##  二、前端三大框架简单对比   
 
 + angular 最早出来（1.0，2.0 2个妈）有组件、有指令
 
@@ -14,7 +14,7 @@
 
 + react   目前最流行（使用最多，有组件、没有指令）
 
-## React和Vue的对比 
+## 三、React和Vue的对比 
 
 1. 组件化： 在ui的角度，对页面的相同元素进行抽离，可以方便后期的维护和代码的复用 
 
@@ -40,14 +40,14 @@
 
   + android java  
 
-## 原生的DOM和虚拟DOM的区别  
+## 四、原生的DOM和虚拟DOM的区别  
 
 + DOM   html  js  大量操作容易造成页面卡顿效果，性能不是很好   
 
 + 虚拟DOM、diff算法 ，脱离了框架就没有意义了，是在内存中模拟DOM树  
 
 
-## 列表渲染的方式  
+## 五、列表渲染的方式  
 
   1. 列表渲染
 
@@ -72,7 +72,7 @@
     + 目的： 达到页面的高效更新 （按需更新）
 
 
-## diff算法  
+## 六、diff算法  
 
 1. tree diff  
 
@@ -86,7 +86,7 @@ ps: 查找顺序：先使用tree diff对比2棵新旧的树，发现里面那个
 
 diff算法 只是提供快捷的查找元素的方案  
 
-## webpack4.x基本使用 
+## 七、webpack4.x基本使用 
 
 ### 本地使用
 
@@ -169,13 +169,13 @@ diff算法 只是提供快捷的查找元素的方案
   + 自动把打包好的main.js添加到index.html中   
 
 
-## 手动打包和webpack-dev-server帮助打包有什么区别   
+## 八、手动打包和webpack-dev-server帮助打包有什么区别   
 
 + 手动打包会把文件持久化   
 
 + webpack-dev-server（没有额外配置的时候）生成在内存中   
 
-## React基本使用 
+## 九、React基本使用 
 
 1. 引入react（核心）react-dom（虚拟DOM渲染）  
 
@@ -183,7 +183,7 @@ diff算法 只是提供快捷的查找元素的方案
 
 3. 使用ReactDOM.render 渲染虚拟DOM到指定区域 
 
-## babel 基本配置
+## 十、babel 基本配置
 
 + yarn add babel-core babel-loader babel-plugin-transform-runtime -D    （核心包）
 
@@ -213,6 +213,6 @@ diff算法 只是提供快捷的查找元素的方案
     }
   ```
 
-## jsx语法  
+## 十一、jsx语法  
 
 可以在js中写html ，所有的html元素最终会转换成对象，谁来转换？babel 

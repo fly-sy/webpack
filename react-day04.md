@@ -1,6 +1,6 @@
 # react-day04  
 
-## propTypes 类型校验   
+## 一、propTypes 类型校验   
 
 1. npm install prop-types -S  
 
@@ -18,7 +18,7 @@
       static propTypes = { count: Types.number.isRequired}
   ```
 
-## defaultProps 设置默认值  
+## 二、defaultProps 设置默认值  
 
   ```
     外界没有传递模式值得时候自己组件内部自己设置默认值  
@@ -26,7 +26,7 @@
     static defaultProps = { count: 0}
   ```
 
-## React生命周期函数  
+## 三、React生命周期函数  
 
 ### 创建阶段的生命周期 
 
@@ -75,7 +75,7 @@
 
 3. componentWillReceiveProps  
 
-## 修改props属性的2种方式 
+## 四、修改props属性的2种方式 
 
 ### 在子组件中修改
 
@@ -122,7 +122,7 @@
   ```
 
 
-## 组件传值  
+## 五、组件传值  
 
 1. 直接在子组组件上使用  {...user}  initcount = {}  可以传递函数 show= {this.show}
 
@@ -130,7 +130,7 @@
 
 ps: 在react中子传父和父传子的原理是一样的，只是传递函数的同时，可以执行传递一个实参给父组件   
 
-## react中使用axios   
+## 六、react中使用axios   
 
 1. import axios from 'axios' 
 
@@ -191,7 +191,7 @@ ps: 在react中子传父和父传子的原理是一样的，只是传递函数�
 
     ```
 
-## 抽离axios完整配置  
+## 七、抽离axios完整配置  
 
     ```
 
