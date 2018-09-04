@@ -24,5 +24,19 @@ module.exports = {
     alias: {
       "@": path.join(__dirname, './src')
     }
+  },
+
+  // 配置反向代理 
+  devServer: {
+    proxy: {
+      '/proxy': {
+        // 设置跨域源路径
+        target: 'https://m.maizuo.com',
+        // 修改请求路径为跨域路径
+        changeOrigin: true,
+        // 重写路径
+        pathRewrite: { '^/proxy': '' }
+      }
+    }
   }
 }

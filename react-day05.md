@@ -240,16 +240,77 @@ ps: 路由就是一种对应关系
 
 ## 七、es6 fetch 返回promise对象   
 
-```
+1. get请求方式 
 
-  fetch(url)
-  .then(response=>{        // 第一个.then 返回的是原生的 Response 对象   
-    return response.json() // response.json() 把二进制文件转换成一个json的promise对象  
-  })
-  .then(res=>{            // 第二个.then 接受转换好的json数据    
-    console.log(res.data)
-  })
+  ```
 
-```
+    fetch(url,{
+      method: 'GET'
+    })
+    .then(response=>{        // 第一个.then 返回的是原生的 Response 对象   
+      return response.json() // response.json() 把二进制文件转换成一个json的promise对象  
+    })
+    .then(res=>{            // 第二个.then 接受转换好的json数据    
+      console.log(res.data)
+    })
+
+  ```
+
+2. post请求方式
+
+
+  ```
+
+    1. 先包装请求数据 
+
+    let setData = new UrlSearchParams()  
+    // name 属性是后台定死的   
+    setData.append('name', '🚜')
+
+    2. 设置请求类型method和请求参数body  
+
+    fetch(url,{
+      method: 'POST',
+      body: setData  
+    })
+    .then(response=>{        // 第一个.then 返回的是原生的 Response 对象   
+      return response.json() // response.json() 把二进制文件转换成一个json的promise对象  
+    })
+    .then(res=>{            // 第二个.then 接受转换好的json数据    
+      console.log(res.data)
+    })
+
+  ```
+
+3. 借助fetch-jsonp  第三方包 
+
+  ```
+    1. fetch-jsonp 结合 promise  
+    
+    fetchJsonp(url,{
+      method: 'GET'
+    })
+    .then(response=>{        // 第一个.then 返回的是原生的 Response 对象   
+      return response.json() // response.json() 把二进制文件转换成一个json的promise对象  
+    })
+    .then(res=>{            // 第二个.then 接受转换好的json数据    
+      console.log(res.data)
+    })
+
+    ps:fetch 默认是没有jsonp 请求，如果想使用需要借助第三方的fetch-jsonp   
+
+  
+  2. fetch-jsonp 结合 async 和 await  
+
+
+  getinfo = async () => {
+
+    const res = await this.$http(url)
+
+    const data = await res.json()  
+  }
+
+
+  ```
 
    
