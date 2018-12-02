@@ -6,7 +6,7 @@
 
 2. cors  
 
-3. webpack-dev-server proxy  （在有wenpack的基础上）
+3. webpack-dev-server proxy  （在有webpack的基础上）
 
   ```
 
@@ -296,17 +296,18 @@ ps: 路由就是一种对应关系
     .then(res=>{            // 第二个.then 接受转换好的json数据    
       console.log(res.data)
     })
-
+  
     ps:fetch 默认是没有jsonp 请求，如果想使用需要借助第三方的fetch-jsonp   
-
+  
   
   2. fetch-jsonp 结合 async 和 await  
+  ```
 
 
   getinfo = async () => {
 
     const res = await this.$http(url)
-
+    
     const data = await res.json()  
   }
 
@@ -314,3 +315,5 @@ ps: 路由就是一种对应关系
   ```
 
    
+  ```
+

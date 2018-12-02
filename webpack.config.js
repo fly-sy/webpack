@@ -7,7 +7,7 @@ const htmlPlugin = new HtmlWebpackPlugin({
 })
 
 module.exports = {
-  mode: 'development',  // development production 
+  mode: 'development',  // development开发环境 production上线环境
   plugins: [
     htmlPlugin
   ],
